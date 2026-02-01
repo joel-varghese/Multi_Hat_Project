@@ -53,7 +53,7 @@ def evaluate(model, data):
         predicted_labels = pred.argmax(dim=1)
         f1 = f1_score(edge_type.numpy(), predicted_labels.numpy(), average='weighted')
     return f1
-
+# loading
 def load_model(path, in_channels, hidden_channels, out_channels, num_edge_labels):
     model = GraphSAGE(in_channels, hidden_channels, out_channels, num_edge_labels)
     model.load_state_dict(torch.load(path))
