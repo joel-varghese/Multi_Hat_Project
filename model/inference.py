@@ -33,3 +33,7 @@ def predict_skills(title: str, top_k: int = 10, threshold: float = 0.5):
 
 
 # Generating prediction and example usage
+
+predictions = predict_skills("Program Manager", top_k=10, threshold=0.3)
+for p in predictions:
+    print(f"  {p['skill']:<40} {p['confidence']:.3f}")
