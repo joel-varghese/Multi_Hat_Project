@@ -29,3 +29,7 @@ def predict_skills(title: str, top_k: int = 10, threshold: float = 0.5):
         if probs[i] >= threshold
     ]
     return results
+
+
+
+# Generating prediction and example usage
